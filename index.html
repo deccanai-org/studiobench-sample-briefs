@@ -268,18 +268,6 @@ section.blk{margin-top:30px}
       main.appendChild(s3b);
     }
 
-    // where it gets hard
-    if(t.checkpoints&&t.checkpoints.length){
-      var s4=sec('Where it gets hard',t.checkpoints.length+' hidden checkpoints');
-      var hb=el('div','hardbox');
-      t.checkpoints.forEach(function(c,i){
-        var r=el('div','hrow');r.appendChild(el('div','hn',(i+1)));r.appendChild(el('div','ht',c));hb.appendChild(r);
-      });
-      s4.appendChild(hb);
-      var sf=el('div','surf');t.surfaces.forEach(function(s){sf.appendChild(el('span','surfchip',s.split(',')[0].split('(')[0].trim()));});
-      s4.appendChild(sf);
-      main.appendChild(s4);
-    }
     main.appendChild(el('div','pagefoot','StudioBench · '+t.brand.brand_name+'. Brand identity and brief authored for the commission; supplied assets shown are the real client inputs the task is built on.'));
     window.scrollTo(0,0);
   }
